@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example using HtmlEventMethods</title>
+</head>
+<body>
+
+	<button onclick="myFunction(event)">Click me</button>
+
+	<script>
+		function myFunction(event) {
+			// getModifierState() method
+			if (event.getModifierState('Alt')) {
+				console.log('Alt key pressed');
+			}
+
+			// getTargetRanges() method
+			var targetRange = event.getTargetRange()
+			console.log('Target ranges:', targetRange);
+
+			// preventDefault() method
+			event.preventDefault();
+
+			// stopImmediatePropagation() method
+			event.stopImmediatePropagation();
+
+			// stopPropagation() method
+			event.stopPropagation();
+		}
+	</script>
+
+</body>
+</html>

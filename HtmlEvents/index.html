@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Event Object Example</title>
+	<style>
+		div {
+			padding: 20px;
+			background-color: pink;
+			border-radius: 5px;
+			text-align: center;
+			margin-bottom: 20px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>DOM Event Object Example</h1>
+
+	<p>Click on the boxes below to trigger events.</p>
+
+	<div id="box1">Click Me!</div>
+	<div id="box2">Hover Me!</div>
+	<div id="box3">Double Click Me!</div>
+	<div id="box4">Key Down Event</div>
+	<div id="box5">Key Up Event</div>
+
+	<script>
+		// Getting the DOM elements
+		const box1 = document.getElementById("box1");
+		const box2 = document.getElementById("box2");
+		const box3 = document.getElementById("box3");
+		const box4 = document.getElementById("box4");
+		const box5 = document.getElementById("box5");
+
+		// Adding event listeners to each box
+		box1.addEventListener("click", clickEventHandler);
+		box2.addEventListener("mouseover", mouseOverEventHandler);
+		box3.addEventListener("dblclick", doubleClickEventHandler);
+		window.addEventListener("keydown", keyDownEventHandler);
+		window.addEventListener("keyup", keyUpEventHandler);
+
+		// Event handlers for each event
+		function clickEventHandler(event) {
+			console.log("Clicked!");
+			console.log(event);
+			console.log(event.target);
+			console.log(event.type);
+			console.log(event.clientX, event.clientY);
+			event.target.style.backgroundColor = "lightblue";
+			event.stopPropagation();
+		}
+
+		function mouseOverEventHandler(event) {
+			console.log("Mouse over!");
+			console.log(event);
+			console.log(event.target);
+			console.log(event.type);
+			event.target.style.backgroundColor = "lightgreen";
+		}
+
+		function doubleClickEventHandler(event) {
+			console.log("Double Clicked!");
+			console.log(event);
+			console.log(event.target);
+			console.log(event.type);
+			event.target.style.backgroundColor = "yellow";
+		}
+
+		function keyDownEventHandler(event) {
+			console.log("Key Down!");
+			console.log(event);
+			console.log(event.keyCode);
+			box4.textContent = "Key Down Event: " + event.keyCode;
+		}
+
+		function keyUpEventHandler(event) {
+			console.log("Key Up!");
+			console.log(event);
+			console.log(event.keyCode);
+			box5.textContent = "Key Up Event: " + event.keyCode;
+		}
+	</script>
+
+</body>
+</html>

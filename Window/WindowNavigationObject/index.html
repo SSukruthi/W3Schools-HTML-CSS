@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Navigator Object Example</title>
+</head>
+<body>
+
+  <h1>Navigator Object Example</h1>
+
+  <p>User Agent: <span id="user-agent"></span></p>
+  <p>Browser Version: <span id="browser-version"></span></p>
+  <p>Language: <span id="language"></span></p>
+  <p>Platform: <span id="platform"></span></p>
+  <p>Cookies Enabled: <span id="cookies-enabled"></span></p>
+
+  <button onclick="getBattery()">Get Battery</button>
+  <button onclick="getGamepads()">Get Gamepads</button>
+  <button onclick="getCurrentLocation()">Get Current Location</button>
+  <button onclick="vibrate()">Vibrate</button>
+
+  <script>
+    function updateUserAgent() {
+      var userAgent = window.navigator.userAgent;
+      document.getElementById("user-agent").innerHTML = userAgent;
+    }
+
+    function updateBrowserVersion() {
+      var browserVersion = window.navigator.appVersion;
+      document.getElementById("browser-version").innerHTML = browserVersion;
+    }
+
+    function updateLanguage() {
+      var language = window.navigator.language;
+      document.getElementById("language").innerHTML = language;
+    }
+
+    function updatePlatform() {
+      var platform = window.navigator.platform;
+      document.getElementById("platform").innerHTML = platform;
+    }
+
+    function updateCookiesEnabled() {
+      var cookiesEnabled = window.navigator.cookieEnabled;
+      document.getElementById("cookies-enabled").innerHTML = cookiesEnabled;
+    }
+
+    function getBattery() {
+      window.navigator.getBattery().then(function(battery) {
+        alert("Battery Level: " + battery.level);
+    });
+}
+function getGamepads() {
+  var gamepads = window.navigator.getGamepads();
+  for (var i = 0; i < gamepads.length; i++) {
+    var gamepad = gamepads[i];
+    alert("Gamepad " + i + ": " + gamepad.id);
+  }
+}
+
+function getCurrentLocation() {
+  window.navigator.geolocation.getCurrentPosition(function(position) {
+    alert("Latitude: " + position.coords.latitude + ", Longitude: " + position.coords.longitude);
+  }, function(error) {
+    alert("Unable to get location: " + error.message);
+  });
+}
+
+function vibrate() {
+  window.navigator.vibrate([100, 50, 100, 50, 100]);
+}
+
+updateUserAgent();
+updateBrowserVersion();
+updateLanguage();
+updatePlatform();
+updateCookiesEnabled();
+</script>
+</body>
+</html>

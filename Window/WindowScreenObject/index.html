@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Window Screen Object Example</title>
+</head>
+
+<body>
+
+    <h1>Window Screen Object Example</h1>
+
+    <p>Avail Height: <span id="availHeight"></span></p>
+    <p>Avail Width: <span id="availWidth"></span></p>
+    <p>Color Depth: <span id="colorDepth"></span></p>
+    <p>Height: <span id="height"></span></p>
+    <p>Width: <span id="width"></span></p>
+    <p>Pixel Depth: <span id="pixelDepth"></span></p>
+
+    <script>
+        // Get references to the HTML elements
+        var availHeightElement = document.getElementById("availHeight");
+        var availWidthElement = document.getElementById("availWidth");
+        var colorDepthElement = document.getElementById("colorDepth");
+        var heightElement = document.getElementById("height");
+        var widthElement = document.getElementById("width");
+        var pixelDepthElement = document.getElementById("pixelDepth");
+
+        // Update the HTML elements with the values from the screen object
+        availHeightElement.innerHTML = window.screen.availHeight;
+        availWidthElement.innerHTML = window.screen.availWidth;
+        colorDepthElement.innerHTML = window.screen.colorDepth;
+        heightElement.innerHTML = window.screen.height;
+        widthElement.innerHTML = window.screen.width;
+        pixelDepthElement.innerHTML = window.screen.pixelDepth;
+    </script>
+
+</body>
+
+</html>

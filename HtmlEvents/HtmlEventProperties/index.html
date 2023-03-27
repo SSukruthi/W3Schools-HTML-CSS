@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Properties Example</title>
+</head>
+<body>
+	<h1>Event Properties Example</h1>
+	<p>Click anywhere on the page to trigger a mouse event.</p>
+
+	<script>
+		document.addEventListener("click", function(event) {
+			console.log("altKey: " + event.altKey);
+			console.log("bubbles: " + event.bubbles);
+			console.log("button: " + event.button);
+			console.log("buttons: " + event.buttons);
+			console.log("cancelable: " + event.cancelable);
+			console.log("clientX: " + event.clientX);
+			console.log("clientY: " + event.clientY);
+			console.log("composed: " + event.composed);
+			console.log("ctrlKey: " + event.ctrlKey);
+			console.log("currentTarget: " + event.currentTarget);
+			console.log("defaultPrevented: " + event.defaultPrevented);
+			console.log("detail: " + event.detail);
+			console.log("eventPhase: " + event.eventPhase);
+			console.log("isTrusted: " + event.isTrusted);
+			console.log("key: " + event.key);
+			console.log("metaKey: " + event.metaKey);
+			console.log("movementX: " + event.movementX);
+			console.log("movementY: " + event.movementY);
+			console.log("offsetX: " + event.offsetX);
+			console.log("offsetY: " + event.offsetY);
+			console.log("pageX: " + event.pageX);
+			console.log("pageY: " + event.pageY);
+			console.log("relatedTarget: " + event.relatedTarget);
+			console.log("screenX: " + event.screenX);
+			console.log("screenY: " + event.screenY);
+			console.log("shiftKey: " + event.shiftKey);
+			console.log("target: " + event.target);
+			console.log("timeStamp: " + event.timeStamp);
+			console.log("type: " + event.type);
+			console.log("view: " + event.view);
+			console.log("which: " + event.which);
+		});
+	</script>
+</body>
+</html>

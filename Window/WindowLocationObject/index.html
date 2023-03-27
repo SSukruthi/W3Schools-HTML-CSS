@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Location Object Example</title>
+</head>
+<body>
+
+  <h1>Location Object Example</h1>
+
+  <p>Current URL: <span id="current-url"></span></p>
+  <p>Origin: <span id="origin"></span></p>
+
+  <button onclick="navigateTo('https://www.google.com')">Go to Google</button>
+  <button onclick="replaceWith('https://www.bing.com')">Replace with Bing</button>
+  <button onclick="reloadPage()">Reload Page</button>
+
+  <script>
+    function updateCurrentUrl() {
+      var currentUrl = window.location.href;
+      document.getElementById("current-url").innerHTML = currentUrl;
+    }
+
+    function updateOrigin() {
+      var origin = window.location.origin;
+      document.getElementById("origin").innerHTML = origin;
+    }
+
+    function navigateTo(url) {
+      window.location.assign(url);
+    }
+
+    function replaceWith(url) {
+      window.location.replace(url);
+    }
+
+    function reloadPage() {
+      window.location.reload();
+    }
+
+    updateCurrentUrl(); // Update the current URL on page load
+    updateOrigin(); // Update the origin on page load
+  </script>
+
+</body>
+</html>

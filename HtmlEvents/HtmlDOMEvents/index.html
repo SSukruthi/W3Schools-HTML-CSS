@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>All HTML Events</title>
+</head>
+
+<body>
+    <button onclick="alert('abort event')">Click me to trigger abort event</button>
+    <br><br>
+    <button onclick="alert('afterprint event')">Click me to trigger afterprint event</button>
+    <br><br>
+    <div style="animation: myanimation 2s;">
+        <p>Hello World!</p>
+    </div>
+    <br><br>
+    <button onclick="alert('beforeprint event')">Click me to trigger beforeprint event</button>
+    <br><br>
+    <button onclick="alert('beforeunload event')">Click me to trigger beforeunload event</button>
+    <br><br>
+    <input type="text" onchange="alert('change event')" value="Type something here and press enter">
+    <br><br>
+    <button onclick="alert('click event')">Click me to trigger click event</button>
+    <br><br>
+    <button oncontextmenu="alert('contextmenu event')">Right-click me to trigger contextmenu event</button>
+    <br><br>
+    <input type="text" oncopy="alert('copy event')" value="Copy this text">
+    <br><br>
+    <input type="text" oncut="alert('cut event')" value="Cut this text">
+    <br><br>
+    <button ondblclick="alert('dblclick event')">Double-click me to trigger dblclick event</button>
+    <br><br>
+    <div draggable="true" ondrag="alert('drag event')">
+        <p>Drag me!</p>
+    </div>
+    <br><br>
+    <div draggable="true" ondragend="alert('dragend event')">
+        <p>Drag me!</p>
+    </div>
+    <br><br>
+    <div ondragenter="alert('dragenter event')" ondragover="alert('dragover event')"
+        ondragleave="alert('dragleave event')" ondrop="alert('drop event')"
+        style="width:100px; height:100px; background-color:gray;">
+        <p>Drop here!</p>
+    </div>
+    <br><br>
+    <audio ondurationchange="alert('durationchange event')">
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+    <br><br>
+    <audio onended="alert('ended event')">
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+    <br><br>
+    <img onerror="alert('error event')" src="doesnotexist.png">
+    <br><br>
+    <input type="text" onfocus="alert('focus event')" value="Click me to trigger focus event">
+    <br><br>
+    <div onfullscreenchange="alert('fullscreenchange event')">
+        <p>Click the button to go fullscreen:</p>
+        <button onclick="document.documentElement.requestFullscreen()">Fullscreen</button>
+    </div>
+    <br><br>
+    <a href="#myanchor" onclick="alert('hashchange event')">Click me to trigger hashchange event</a>
+    <br><br>
+    <input type="text" oninput="alert('input event')" value="Type something here">
+    <br><br>
+    <form oninvalid="alert('invalid event')">
+        <select onchange="alert('change event')">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+        <br><br>
+        <input type="text" onkeydown="alert('keydown event')" value="Press any key">
+        <br><br>
+        <button onkeyup="alert('keyup event')">Release any key to trigger keyup event</button>
+        <br><br>
+        <textarea onkeypress="alert('keypress event')" rows="4" cols="50">Type something here</textarea>
+        <br><br>
+        <button onload="alert('load event')">Click me to trigger load event</button>
+        <br><br>
+        <button onmousedown="alert('mousedown event')">Press me to trigger mousedown event</button>
+        <br><br>
+        <button onmousemove="alert('mousemove event')">Move your mouse over me to trigger mousemove event</button>
+        <br><br>
+        <button onmouseout="alert('mouseout event')">Move your mouse out of me to trigger mouseout event</button>
+        <br><br>
+        <button onmouseover="alert('mouseover event')">Hover over me to trigger mouseover event</button>
+        <br><br>
+        <button onmouseup="alert('mouseup event')">Release me to trigger mouseup event</button>
+        <br><br>
+        <form onreset="alert('reset event')">
+            <input type="text" value="Type something">
+            <br><br>
+            <button type="reset">Reset</button>
+        </form>
+        <br><br>
+        <input type="text" onsearch="alert('search event')"
+            value="Type something and then click on the X button to trigger search event">
+        <br><br>
+        <form onsubmit="alert('submit event')">
+            <input type="text" value="Type something">
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>
+        <br><br>
+        <button onunload="alert('unload event')">Click me to trigger unload event</button>
+        <br><br>
+    </form>
+
+</body>
+
+</html>

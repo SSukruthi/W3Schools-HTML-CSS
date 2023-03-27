@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Console Methods Example</title>
+</head>
+
+<body>
+
+  <h1>Console Methods Example</h1>
+
+  <script>
+    // Log some messages to the console
+    console.log("This is a log message.");
+    console.error("This is an error message.");
+    console.warn("This is a warning message.");
+    console.info("This is an informational message.");
+    // Display some data in a table
+    var data = [
+      { name: "Alice", age: 25 },
+      { name: "Bob", age: 30 },
+      { name: "Charlie", age: 35 }
+    ];
+    console.table(data);
+
+    // Define the function
+    function myFunction() {
+      // Code for the function
+      var sum = 0;
+      for (var i = 1; i <= 1000; i++) {
+        sum += i;
+      }
+      console.log(sum);
+    }
+
+    // Call the function
+    console.time("myFunction");
+    myFunction();
+    console.timeEnd("myFunction");
+
+    // Test an assertion
+    console.assert(1 === 2, "1 does not equal 2!");
+
+    // Clear the console
+    //console.clear();
+
+    // Count how many times a message is logged
+    for (var i = 0; i < 5; i++) {
+      console.count("Loop iteration");
+    }
+
+    // Group some messages together
+    console.group("Group example");
+    console.log("Message 1");
+    console.log("Message 2");
+    console.groupCollapsed("Collapsed group");
+    console.log("Message 3");
+    console.log("Message 4");
+    console.groupEnd();
+    console.log("Message 5");
+    console.groupEnd();
+
+    // Trace a function call
+    function function1() {
+      function2();
+    }
+
+    function function2() {
+      function3();
+    }
+
+    function function3() {
+      console.trace();
+    }
+
+    function1();
+  </script>
+
+</body>
+
+</html>

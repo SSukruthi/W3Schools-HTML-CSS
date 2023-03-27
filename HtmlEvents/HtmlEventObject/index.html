@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event Examples</title>
+</head>
+
+<body>
+
+    <button onmousedown="console.log('Mouse down detected!')" onmouseup="console.log('Mouse up detected!')">Click
+        me!</button>
+    <input type="text" oninput="console.log('Input detected!')" onchange="console.log('Change detected!')">
+    <form onsubmit="console.log('Form submitted!')"><button type="submit">Submit</button></form>
+    <p>Scroll down and up to trigger scroll event</p>
+
+    <script>
+        // Animation Events
+        document.addEventListener('animationend', function (event) {
+            console.log('Animation ended!');
+        });
+
+        document.addEventListener('animationiteration', function (event) {
+            console.log('Animation iteration!');
+        });
+
+        document.addEventListener('animationstart', function (event) {
+            console.log('Animation started!');
+        });
+
+        // Clipboard Events
+        document.addEventListener('copy', function (event) {
+            console.log('Copy event detected!');
+        });
+
+        document.addEventListener('cut', function (event) {
+            console.log('Cut event detected!');
+        });
+
+        document.addEventListener('paste', function (event) {
+            console.log('Paste event detected!');
+        });
+
+        // Drag Events
+        document.addEventListener('drag', function (event) {
+            console.log('Drag event detected!');
+        });
+
+        document.addEventListener('dragend', function (event) {
+            console.log('Drag end detected!');
+        });
+
+        document.addEventListener('dragenter', function (event) {
+            console.log('Drag enter detected!');
+        });
+
+        document.addEventListener('dragleave', function (event) {
+            console.log('Drag leave detected!');
+        });
+
+        document.addEventListener('dragover', function (event) {
+            console.log('Drag over detected!');
+        });
+
+        document.addEventListener('dragstart', function (event) {
+            console.log('Drag start detected!');
+        });
+
+        document.addEventListener('drop', function (event) {
+            console.log('Drop event detected!');
+        });
+
+        // Focus Events
+        document.addEventListener('blur', function (event) {
+            console.log('Blur event detected!');
+        });
+
+        document.addEventListener('focus', function (event) {
+            console.log('Focus event detected!');
+        });
+
+        document.addEventListener('focusin', function (event) {
+            console.log('Focus in event detected!');
+        });
+
+        document.addEventListener('focusout', function (event) {
+            console.log('Focus out event detected!');
+        });
+
+        // Hash Change Event
+        window.addEventListener('hashchange', function (event) {
+            console.log('Hash change event detected!');
+        });
+
+        // Input Event
+        document.addEventListener('input', function (event) {
+            console.log('Input event detected!');
+        });
+
+        // Keyboard Events
+        document.addEventListener('keydown', function (event) {
+            console.log('Key down event detected!');
+        });
+
+        document.addEventListener('keypress', function (event) {
+            console.log('Key press event detected!');
+        });
+
+        document.addEventListener('keyup', function (event) {
+            console.log('Key up event detected!');
+        });
+
+        // Mouse Events
+        document.addEventListener('click', function (event) {
+            console.log('Click event detected!');
+        });
+
+        document.addEventListener('contextmenu', function (event) {
+            console.log('Context menu event detected!');
+        });
+
+        document.addEventListener('dblclick', function (event) {
+            console.log('Double click event detected!');
+        });
+
+        document.addEventListener('mousedown', function (event) {
+            console.log('Mouse down event detected!');
+        });
+
+        document.addEventListener('mouseenter', function (event) {
+            console.log('Mouse enter event detected!');
+        });
+        document.addEventListener('mouseleave', function (event) {
+            console.log('Mouse leave event detected!');
+        });
+
+        document.addEventListener('mousemove', function (event) {
+            console.log('Mouse move event detected!');
+        });
+
+        document.addEventListener('mouseout', function (event) {
+            console.log('Mouse out event detected!');
+        });
+
+        document.addEventListener('mouseover', function (event) {
+            console.log('Mouse over event detected!');
+        });
+
+        document.addEventListener('mouseup', function (event) {
+            console.log('Mouse up event detected!');
+        });
+
+        // Page Transition Events
+        window.addEventListener('pagehide', function (event) {
+            console.log('Page hide event detected!');
+        });
+
+        window.addEventListener('pageshow', function (event) {
+            console.log('Page show event detected!');
+        });
+
+        // Popstate Event
+        window.addEventListener('popstate', function (event) {
+            console.log('Popstate event detected!');
+        });
+
+        // Progress Events
+        document.addEventListener('error', function (event) {
+            console.log('Error event detected!');
+        });
+
+        document.addEventListener('loadstart', function (event) {
+            console.log('Load start event detected!');
+        });
+
+        // Storage Event
+        window.addEventListener('storage', function (event) {
+            console.log('Storage event detected!');
+        });
+
+        // Touch Events
+        document.addEventListener('touchcancel', function (event) {
+            console.log('Touch cancel event detected!');
+        });
+
+        document.addEventListener('touchend', function (event) {
+            console.log('Touch end event detected!');
+        });
+
+        document.addEventListener('touchmove', function (event) {
+            console.log('Touch move event detected!');
+        });
+
+        document.addEventListener('touchstart', function (event) {
+            console.log('Touch start event detected!');
+        });
+
+        // Transition Event
+        document.addEventListener('transitionend', function (event) {
+            console.log('Transition end event detected!');
+        });
+
+        // UI Events
+        window.addEventListener('abort', function (event) {
+            console.log('Abort event detected!');
+        });
+
+        window.addEventListener('beforeunload', function (event) {
+            console.log('Before unload event detected!');
+        });
+
+        window.addEventListener('error', function (event) {
+            console.log('Error event detected!');
+        });
+
+        window.addEventListener('load', function (event) {
+            console.log('Load event detected!');
+        });
+
+        window.addEventListener('resize', function (event) {
+            console.log('Resize event detected!');
+        });
+
+        window.addEventListener('scroll', function (event) {
+            console.log('Scroll event detected!');
+        });
+
+        document.addEventListener('select', function (event) {
+            console.log('Select event detected!');
+        });
+
+        window.addEventListener('unload', function (event) {
+            console.log('Unload event detected!');
+        });
+
+        // Wheel Event
+        document.addEventListener('wheel', function (event) {
+            console.log('Wheel event detected!');
+        });
+    </script>
+</body>
+
+</html>
