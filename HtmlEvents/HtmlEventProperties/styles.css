@@ -1,0 +1,41 @@
+/* Reset styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f1f1f1;
+}
+
+/* Header styles */
+h1 {
+	font-size: 32px;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+/* Paragraph styles */
+p {
+	font-size: 18px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+/* Code block styles */
+code {
+	display: block;
+	background-color: #fff;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+}
+
+/* Script styles */
+script {
+	margin-top: 30px;
+}

@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Event Properties Example</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
 </head>
 <body>
 	<h1>Event Properties Example</h1>
@@ -24,6 +26,7 @@
 			console.log("eventPhase: " + event.eventPhase);
 			console.log("isTrusted: " + event.isTrusted);
 			console.log("key: " + event.key);
+			console.log("location: " + event.location);
 			console.log("metaKey: " + event.metaKey);
 			console.log("movementX: " + event.movementX);
 			console.log("movementY: " + event.movementY);
@@ -40,7 +43,44 @@
 			console.log("type: " + event.type);
 			console.log("view: " + event.view);
 			console.log("which: " + event.which);
+			console.log("data: " + event.data);
+			console.log("deltaX: " + event.deltaX);
+			console.log("deltaY: " + event.deltaY);
+			console.log("deltaZ: " + event.deltaZ);
+			console.log("deltaMode: " + event.deltaMode);
+			
+
 		});
 	</script>
 </body>
 </html>
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Properties Example</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<h1>Event Properties Example</h1>
+	<p>Click anywhere on the page to trigger a mouse event.</p>
+
+	<script>
+		document.addEventListener("click", function(event) {
+			const properties = [
+				"altKey", "bubbles", "button", "buttons", "cancelable", "clientX", "clientY",
+				"composed", "ctrlKey", "currentTarget", "defaultPrevented", "detail", "eventPhase",
+				"isTrusted", "key", "metaKey", "movementX", "movementY", "offsetX", "offsetY",
+				"pageX", "pageY", "relatedTarget", "screenX", "screenY", "shiftKey", "target",
+				"timeStamp", "type", "view", "which"
+			];
+
+			properties.forEach(property => {
+				console.log(`${property}: ${event[property]}`);
+			});
+		});
+	</script>
+</body>
+</html>
+-->
+

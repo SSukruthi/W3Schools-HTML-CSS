@@ -5,28 +5,43 @@
 </head>
 <body>
 
-	<button onclick="myFunction(event)">Click me</button>
+	<button id="myBtn">Click me</button>
+	<p id="myText">This is some text that you can select</p>
 
 	<script>
-		function myFunction(event) {
-			// getModifierState() method
-			if (event.getModifierState('Alt')) {
-				console.log('Alt key pressed');
-			}
+		var btn = document.getElementById("myBtn");
+		var text = document.getElementById("myText");
 
-			// getTargetRanges() method
-			var targetRange = event.getTargetRange()
-			console.log('Target ranges:', targetRange);
-
+		btn.addEventListener("click", function(event) {
 			// preventDefault() method
 			event.preventDefault();
+			console.log('preventDefault() called from button click event');
+		});
 
-			// stopImmediatePropagation() method
-			event.stopImmediatePropagation();
-
+		text.addEventListener("click", function(event) {
 			// stopPropagation() method
 			event.stopPropagation();
-		}
+			console.log('stopPropagation() called from text click event');
+		});
+
+		text.addEventListener("click", function(event) {
+			// stopImmediatePropagation() method
+			event.stopImmediatePropagation();
+			console.log('stopImmediatePropagation() called from text click event');
+		});
+
+		text.addEventListener("mouseup", function(event) {
+			// getTargetRanges() method
+			var targetRange = window.getSelection().toString();
+			console.log('Target ranges:', targetRange);
+		});
+
+		document.addEventListener("keydown", function(event) {
+			// getModifierState() method
+			if (event.getModifierState('Alt')) {
+				console.log('Alt key pressed from keydown event');
+			}
+		});
 	</script>
 
 </body>
