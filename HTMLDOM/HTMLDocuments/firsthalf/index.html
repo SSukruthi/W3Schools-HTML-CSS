@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document Object</Object></title>
+</head>
+
+<body>
+
+    <h1>The Document Object</h1>
+
+
+    <input type="text" value="An input field">
+    <button>A Button</button>
+
+    <p>Click anywhere in the document to display the active element:</p>
+    <p id="activeElement"></p>
+
+    <p>Click the button to add an event listener:</p>
+    <button id="addButton">Add Event Listener</button>
+
+    <p>Click "Try it" to adopt the first H1 element in the iframe.</p>
+    <iframe id="myFrame" src="https://www.wikipedia.org/" style="height:380px;width:520px;"></iframe>
+    <button id="adoptButton">Try it</button>
+
+    <p id="demo"></p>
+
+    <a name="html">HTML Tutorial</a><br>
+    <a name="css">CSS Tutorial</a><br>
+    <a name="xml">XML Tutorial</a><br>
+
+    <p>The number of anchors in this document is:</p>
+    <p id="numAnchors"></p>
+
+    <p>The number of applets in this document is:</p>
+    <p id="numApplets"></p>
+
+    <h2>The baseURI Property</h2>
+
+    <p>The base URI of the document is:</p>
+    <p id="baseURI"></p>
+
+    <h2>The characterSet Property</h2>
+
+    <p>The encoding of this document is:</p>
+
+    <p id="charset"></p>
+
+    <h2>The open() and close() Methods</h2>
+
+    <p>Click "Open" to open this document, write some text to it and close it:</p>
+
+    <button onclick="myFunction()">Open</button>
+
+    <script>
+        // Function to display the active element
+        function displayActiveElement() {
+            const element = document.activeElement.tagName;
+            document.getElementById("activeElement").innerHTML = "Active Element: " + element;
+        }
+
+        // Add an event listener to the button to add another event listener
+        document.getElementById("addButton").addEventListener("click", function () {
+            document.addEventListener("click", function () {
+                document.getElementById("demo").innerHTML = "Hello World!";
+            });
+        });
+
+        // Add an event listener to the body to display the active element
+        document.body.addEventListener("click", displayActiveElement);
+
+        // Add an event listener to the button to adopt the first H1 element in the iframe
+        document.getElementById("adoptButton").addEventListener("click", function () {
+            const frame = document.getElementById("myFrame");
+            const h1 = frame.contentWindow.document.getElementsByTagName("H1")[0];
+            const node = document.adoptNode(h1);
+            document.body.appendChild(node);
+        });
+
+        // Display the number of anchors in the document
+        document.getElementById("numAnchors").innerHTML = document.anchors.length;
+
+        // Display the number of applets in the document
+        document.getElementById("numApplets").innerHTML = document.applets.length;
+
+        // Display the base URI of the document
+        document.getElementById("baseURI").innerHTML = document.baseURI;
+        // Display the character encoding in the document
+        let encoding = document.characterSet;
+        document.getElementById("charset").innerHTML = encoding;
+
+        // Open the document, write some text and close it
+        function myFunction() {
+            document.open();
+            document.write("<h1>Hello World</h1>");
+            document.write("<p>Open a document overwrites the original content.</p>");
+            document.close();
+        }
+
+    </script>
+</body>
+
+</html>

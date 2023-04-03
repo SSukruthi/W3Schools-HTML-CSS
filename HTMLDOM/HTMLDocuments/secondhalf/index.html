@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<style>
+    .democlass {
+        color: red;
+    }
+</style>
+
+<body>
+    <h1>The Document Object</h1>
+    <h2>The createAttribute() and setAttributeNode() Methods</h2>
+
+    <p>Click "Add" to create a class attribute and add it to the first h1 element.</p>
+
+    <button onclick="myFunction()">Add</button>
+
+    <script>
+        function myFunction() {
+            // Create a class attribute:
+            const att = document.createAttribute("class");
+
+            // Set a value of the class attribute
+            att.value = "democlass";
+
+            // Add the class attribute to the first h1;
+            document.getElementsByTagName("h1")[0].setAttributeNode(att);
+
+            // Set a new cookie
+            document.cookie = "username=John Doe; expires=Thu, 6 April 2023 12:00:00 UTC; path=/";
+
+            // Display all cookies
+            let allCookies = document.cookie;
+            document.getElementById("demo").innerHTML = allCookies;
+
+            // Create a comment
+            const comment = document.createComment("My personal comments");
+            document.body.appendChild(comment);
+
+            // Create a document fragment:
+            const dFrag = document.createDocumentFragment();
+            const fruits = ["Banana", "Orange", "Mango"];
+            for (let x in fruits) {
+                const li = document.createElement("li");
+                li.textContent = fruits[x];
+                dFrag.appendChild(li);
+            }
+
+            // Add fragment to a list: 
+            document.getElementById("myList").appendChild(dFrag);
+
+            // Create a new element:
+            const para = document.createElement("p");
+            para.innerText = "This is a paragraph.";
+
+            // Append the new element to the body:
+            document.body.appendChild(para);
+
+            // Create a new event:
+            const ev = document.createEvent("MouseEvent");
+            ev.initMouseEvent("mouseover", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+
+            // Dispatch the event to the element:
+            document.getElementById("myDiv").dispatchEvent(ev);
+
+            const p = document.createElement("p");
+            const textNode = document.createTextNode("This is a dynamically created paragraph.");
+            p.appendChild(textNode);
+            document.body.appendChild(p);
+        }
+    </script>
+
+    <p>Cookies associated with this document:</p>
+    <p id="demo"></p>
+
+    <h2>The createDocumentFragment() Method</h2>
+
+    <p>Add array items to an empty list:</p>
+
+    <ul id="myList"></ul>
+
+    <h2>The createEvent() Method</h2>
+
+    <p>The createEvent() method allows you to simulate events.</p>
+
+    <p>"myDiv" will get a new star every time you mouse over it:</p>
+
+    <div id="myDiv" style="padding:50px;background-color:yellow;" onmouseover="this.innerHTML += '*'">*</div>
+
+    <p><button onclick="myFunction(event)">Simulate Mouse Over</button></p>
+
+    <h2>The createElement() and createTextNode() Methods</h2>
+
+    <p>Create a paragraph element with some text:</p>
+
+</body>
+
+</html>
