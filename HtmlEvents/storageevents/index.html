@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Storage Event</h1>
+
+<p>The Storage Event is triggered when there is a change in the window's storage area.</p>
+
+<p><strong>Note:</strong> The storage event is only triggered when a window 
+<strong>other than itself</strong> makes the changes.</p>
+
+<p>Therefore, in this example, a hidden iframe is used. The hidden iframe has one mission; whenever it is targeted, it will change the value of a local storage item named "mytime" with the value of the current date in milliseconds.</p>
+
+<h1>The Storage Event Properties</h1>
+
+<p>The url of the page where the item was changed:</p>
+
+<p><strong>url:</strong> <span id="url"></span></p>
+<p><strong>key:</strong> <span id="key"></span></p>
+<p><strong>oldValue:</strong> <span id="oldValue"></span></p>
+<p><strong>newValue:</strong> <span id="newValue"></span></p>
+<p><strong>storageArea:</strong> <span id="storageArea"></span></p>
+
+<script src="script.js"></script>
+
+<iframe src="test_local_storage.htm" style="display:none"></iframe>
+
+</body>
+</html>

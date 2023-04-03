@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Test Local Storage</title>
+</head>
+<body>
+  <script>
+    // Set the value of the "mytime" item in localStorage to the current time in milliseconds
+    localStorage.setItem("mytime", new Date().getTime());
+
+    // Trigger the StorageEvent in the parent window
+    parent.postMessage("storage", "*");
+  </script>
+</body>
+</html>

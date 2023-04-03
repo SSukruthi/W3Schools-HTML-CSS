@@ -1,0 +1,10 @@
+#myDIV {
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    transition: width 2s;
+}
+
+#myDIV:hover {
+    width: 400px;
+}

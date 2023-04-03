@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML DOM Events</title>
+</head>
+<body>
+	<img src="image.gif" onerror="myFunction()">
+	<p>A function is triggered if an error occurs when loading the image. The function shows an alert box with a text. In this example, we refer to an image that does not exist, therefore the onerror event occurs.</p>
+
+	<h1>HTML DOM Events</h1>
+	<h2>The onloadstart Event</h2>
+
+	<video controls onloadstart="myFunction()">
+		<source src="mov_bbb.mp4" type="video/mp4">
+		<source src="mov_bbb.ogg" type="video/ogg">
+		Your browser does not support video playback.
+	</video>
+
+	<p id="demo">Event has fired: </p>
+
+	<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML DOM Events</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <h1>HTML DOM Events</h1>
+
+    <!-- onclick event -->
+    <h2>The onclick Event</h2>
+    <p>The onclick event triggers a function when an element is clicked on.</p>
+    <p>Click to trigger a function that will output "Hello World":</p>
+    <button onclick="myClickFunction()">Click me</button>
+    <p id="clickDemo"></p>
+
+    <!-- contextmenu event -->
+    <h2>The contextmenu Event</h2>
+    <div style="border:1px solid black;text-align:center">
+        <p>Right-click in this box!</p>
+        <p>Context menu will show.</p>
+    </div>
+    <br>
+    <div id="myDiv" style="border:1px solid black;text-align:center">
+        <p>Right-click in this box!</p>
+        <p>Context menu is disabled.</p>
+    </div>
+
+    <!-- dblclick event -->
+    <h2>The ondblclick Event</h2>
+    <p ondblclick="myDblClickFunction()">Double-click this paragraph to trigger a function.</p>
+    <p id="dblClickDemo"></p>
+
+    <!-- onmousedown and onmouseup events -->
+    <h2>The onmousedown and onmouseup Events</h2>
+    <p>Clock the text below!</p>
+    <p id="myP">The mouseDown() function sets the color of this text to red. The mouseUp() function sets the color of
+        this text to blue.</p>
+
+    <!-- onmouseenter -->
+    <h2>The onmouseenter Event</h2>
+    <img onmouseenter="bigImg(this)" onmouseleave="normalImg(this)" src="smiley.gif" alt="Smiley" width="32"
+        height="32">
+    <p>The function bigImg() is triggered when the user moves the mouse pointer onto the image.</p>
+    <p>The function normalImg() is triggered when the mouse pointer is moved out of the image.</p>
+    
+    <!-- onmousemove-->
+    <h2>The onmousemove Event</h2>
+    <div onmousemove="myFunction(event)" onmouseout="clearCoor()"></div>
+    <p>Mouse over the rectangle above, and get the coordinates of your mouse pointer.</p>
+    <p>When the mouse is moved over the div, the p element will display the horizontal and vertical coordinates of your
+        mouse pointer, whose values are returned from the clientX and clientY properties on the
+        MouseEvent object.</p>
+    <p id="demo"></p>
+    <script src="script.js"></script>
+</body>
+
+</html>
